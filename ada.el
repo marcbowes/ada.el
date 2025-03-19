@@ -22,6 +22,7 @@
 (defvar ada--credentials-cache nil
   "Cache for storing AWS credentials. Format: (profile credentials expiration-time)")
 
+;;;###autoload
 (defun ada-get-credentials (profile)
   "Get AWS credentials for given profile, using cache if valid"
   (let* ((cached (assoc profile ada--credentials-cache))
